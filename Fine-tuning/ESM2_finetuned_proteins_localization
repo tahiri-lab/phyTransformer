@@ -14,7 +14,7 @@ import pandas as pd
 import os
 
 # Définir les chemins des dossiers
-datasets_dir = "Datasets"
+datasets_dir = "../Datasets"
 finetuning_dir = "Fine-tuning"
 
 # Chemin complet du fichier .gz
