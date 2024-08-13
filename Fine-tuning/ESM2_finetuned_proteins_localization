@@ -2,6 +2,13 @@
 #https://huggingface.co/facebook/esm2_t6_8M_UR50D
 #https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/protein_language_modeling.ipynb#scrollTo=9c3cf6da
 
+from huggingface_hub import login
+
+login(
+  token="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", # ADD YOUR TOKEN HERE
+  add_to_git_credential=True
+)
+
 import gzip
 import pandas as pd
 import os

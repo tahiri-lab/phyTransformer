@@ -1,0 +1,58 @@
+{
+  "best_metric": 0.9364833462432223,
+  "best_model_checkpoint": "esm2_t6_8M_UR50D-finetuned-localization\\checkpoint-484",
+  "epoch": 2.0,
+  "eval_steps": 500,
+  "global_step": 968,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 1.0,
+      "eval_accuracy": 0.9364833462432223,
+      "eval_loss": 0.2342473566532135,
+      "eval_runtime": 313.3466,
+      "eval_samples_per_second": 4.12,
+      "eval_steps_per_second": 0.517,
+      "step": 484
+    },
+    {
+      "epoch": 1.0330578512396693,
+      "grad_norm": 15.973362922668457,
+      "learning_rate": 1.3112947658402204e-05,
+      "loss": 0.2497,
+      "step": 500
+    },
+    {
+      "epoch": 2.0,
+      "eval_accuracy": 0.9364833462432223,
+      "eval_loss": 0.2313309907913208,
+      "eval_runtime": 270.0648,
+      "eval_samples_per_second": 4.78,
+      "eval_steps_per_second": 0.6,
+      "step": 968
+    }
+  ],
+  "logging_steps": 500,
+  "max_steps": 1452,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 3,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 155302121399016.0,
+  "train_batch_size": 8,
+  "trial_name": null,
+  "trial_params": null
+}
