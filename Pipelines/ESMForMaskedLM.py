@@ -1,22 +1,15 @@
 #https://huggingface.co/docs/transformers/en/model_doc/esm
-from transformers import AutoTokenizer, EsmForMaskedLM
-import torch
+from transformers import pipeline
 
-tokenizer = AutoTokenizer.from_pretrained("facebook/esm2_t6_8M_UR50D")
-model = EsmForMaskedLM.from_pretrained("facebook/esm2_t6_8M_UR50D")
+# Charger le pipeline "fill-mask" avec le modèle ESM2
+pipe = pipeline("fill-mask", model="facebook/esm2_t6_8M_UR50D")
 
-inputs = tokenizer("The capital of France is <mask>.", return_tensors="pt")
+# La séquence avec le token <mask> pour la prédiction
+sequence = "MQIFVKTLTGKTITLEVEPS<mask>TIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG"
 
-with torch.no_grad():
-    logits = model(**inputs).logits
+# Exécuter la prédiction
+results = pipe(sequence)
 
-# retrieve index of <mask>
-mask_token_index = (inputs.input_ids == tokenizer.mask_token_id)[0].nonzero(as_tuple=True)[0]
-
-predicted_token_id = logits[0, mask_token_index].argmax(axis=-1)
-
-labels = tokenizer("The capital of France is Paris.", return_tensors="pt")["input_ids"]
-# mask labels of non-<mask> tokens
-labels = torch.where(inputs.input_ids == tokenizer.mask_token_id, labels, -100)
-
-outputs = model(**inputs, labels=labels)
+# Afficher les résultats
+for result in results:
+    print(f"Token prédit: {result['token_str']}, Score: {result['score']:.4f}, Séquence complétée: {result['sequence']}")
