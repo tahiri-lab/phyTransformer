@@ -11,3 +11,14 @@ huggingfacecourse - glue
 
 Shawnincourse - imdb from huggingface
 
+What do pipelines ? Pipelines are model published on huggingface we can use them directly without fine tune but it generally don't answer exactly to our special tasks.
+
+So 1 distilibert for sentiment analysis (text classifcation)
+1 distilibert for Masked language Modeling
+1 ESM finetuned protein localization we will compare it with our homemade finetuned
+1 ESM for Masked Language Modeling
+
+What do fine-tuning ?
+Fine-tuning is pre-trained model who is train on a special task (for example text classifcation) with a dataset (for example Uniprot subcellular protein localization)
+So there are 3 finetuned models DistilBERT, ESM2 and GPT2
+We will compare diferrences with these different model to see which is the best and finally is it worth it to use transformer model than usual algorithm.
