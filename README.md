@@ -1,6 +1,17 @@
 # phyTransforner
 phyTransformer
 
+ALL LIBRAIRIES YOU WILL NEED
+transformers
+datasets
+scikit-learn
+torch
+peft
+evaluate
+numpy
+pandas
+huggingface_hub
+
 Where the Datasets come from?
 Uniprot subcellular localization comes from a notebook google colab made by facebook on how fine tune the model ESM2
 
