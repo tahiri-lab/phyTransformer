@@ -1,4 +1,4 @@
 env/
 venv/
 config.py
-Fine-tuning\distilbert-base-uncased-finetuned-localization
+Fine-tuning/distilbert-base-uncased-finetuned-localization/
