@@ -1,7 +1,3 @@
-Here’s an improved version of your README:
-
----
-
 # phyTransformer
 
 Welcome to the **phyTransformer** repository! This project explores the capabilities of Transformer models in the field of biology, particularly focusing on biological sequences. It provides a comprehensive review and practical implementation of these models, comparing their performance on various biological classification tasks.
