@@ -57,5 +57,7 @@ We compare the performance of these fine-tuned models to evaluate which one perf
 
 This repository demonstrates the potential of Transformer models in biological research, offering insights into their performance and applicability in real-world biological tasks. We hope this work contributes to the ongoing discussion about the benefits of using advanced machine learning models in bioinformatics.
 
-# .gitignore
+### .gitignore
 I put env where i installed all the libraries, config.py where i put the private hugging face model and some folders which are results from fine-tuning but too big for bieng push in Github
+
+Paul HUARD
