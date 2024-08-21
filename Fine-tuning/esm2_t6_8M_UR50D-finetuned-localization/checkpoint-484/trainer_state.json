@@ -1,5 +1,5 @@
 {
-  "best_metric": 0.9364833462432223,
+  "best_metric": 0.9465530596436871,
   "best_model_checkpoint": "esm2_t6_8M_UR50D-finetuned-localization\\checkpoint-484",
   "epoch": 1.0,
   "eval_steps": 500,
@@ -10,11 +10,11 @@
   "log_history": [
     {
       "epoch": 1.0,
-      "eval_accuracy": 0.9364833462432223,
-      "eval_loss": 0.2342473566532135,
-      "eval_runtime": 313.3466,
-      "eval_samples_per_second": 4.12,
-      "eval_steps_per_second": 0.517,
+      "eval_accuracy": 0.9465530596436871,
+      "eval_loss": 0.19051623344421387,
+      "eval_runtime": 309.7338,
+      "eval_samples_per_second": 4.168,
+      "eval_steps_per_second": 0.523,
       "step": 484
     }
   ],
@@ -35,7 +35,7 @@
       "attributes": {}
     }
   },
-  "total_flos": 77906724872148.0,
+  "total_flos": 77872156195284.0,
   "train_batch_size": 8,
   "trial_name": null,
   "trial_params": null
